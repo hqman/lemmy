@@ -986,7 +986,8 @@ export type GoogleModels =
 	| "gemini-2.5-flash-preview-native-audio-dialog"
 	| "gemini-2.5-pro-exp-03-25"
 	| "gemini-2.5-pro-preview-03-25"
-	| "gemini-2.5-pro-preview-05-06"
+	| "gemini-2.5-pro"
+	| "gemini-2.5-pro-preview-06-05"
 	| "gemini-embedding-exp"
 	| "gemini-exp-1206"
 	| "gemini-pro-vision"
@@ -1372,7 +1373,17 @@ export const GoogleModelData = {
 			outputPerMillion: 0.3,
 		},
 	},
-	"gemini-2.5-pro-preview-05-06": {
+	"gemini-2.5-pro": {
+		contextWindow: 1048576,
+		maxOutputTokens: 65536,
+		supportsTools: true,
+		supportsImageInput: true,
+		pricing: {
+			inputPerMillion: 1.25,
+			outputPerMillion: 10,
+		},
+	},
+	"gemini-2.5-pro-preview-06-05": {
 		contextWindow: 1048576,
 		maxOutputTokens: 65536,
 		supportsTools: true,
@@ -1603,7 +1614,8 @@ export const ModelToProvider = {
 	"gemini-2.5-flash-preview-native-audio-dialog": "google",
 	"gemini-2.5-pro-exp-03-25": "google",
 	"gemini-2.5-pro-preview-03-25": "google",
-	"gemini-2.5-pro-preview-05-06": "google",
+	"gemini-2.5-pro": "google",
+	"gemini-2.5-pro-preview-06-05": "google",
 	"gemini-embedding-exp": "google",
 	"gemini-exp-1206": "google",
 	"gemini-pro-vision": "google",
